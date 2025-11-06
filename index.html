@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/png" href="discotools-xyz-icon (2).png" />
+  <title>SHARUUX – Developer & Bot Creator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="grain"></div>
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div class="brand-text">SHARUUX</div>
+          <div class="tagline">Python Developer · Web Designer · Bot Creator</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-badge">
+        <span></span>
+        Available for Projects
+      </div>
+
+      <h1>Crafting Digital Excellence</h1>
+      <p class="lead">Hi, I'm SHARUUX – a passionate developer specializing in Python and modern web development. I
+        create custom Discord bots, stunning websites, and powerful automation solutions that bring your ideas to life.
+      </p>
+
+      <div class="cta">
+        <button class="btn btn-primary" onclick="joinDiscord()">Join My Discord</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">100+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">50+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">What I Do</h2>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🐍</div>
+        <strong>Python Development</strong>
+        <div class="small">Building powerful Discord bots, automation scripts, backend systems, and data processing
+          tools with clean, efficient Python code.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌐</div>
+        <strong>Web Development</strong>
+        <div class="small">Creating responsive, modern websites with stunning designs, smooth animations, and seamless
+          user experiences across all devices.</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <strong>Premium Support</strong>
+        <div class="small">Dedicated maintenance, lightning-fast responses, regular updates, and continuous improvements
+          to keep your projects running smoothly.</div>
+      </div>
+    </div>
+
+    <section id="about" class="about-section">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>I'm a dedicated developer on a continuous journey of learning and innovation. Currently mastering Python and
+          modern web technologies, I'm passionate about creating solutions that make a real difference. From Discord bot
+          development to full-stack web applications, I bring creativity and technical expertise to every project.</p>
+
+        <h3 style="margin-top:48px">Technical Skills</h3>
+        <div class="skills">
+          <div class="skill">Python</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">HTML/CSS</div>
+          <div class="skill">Discord.py</div>
+          <div class="skill">React</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">Git/GitHub</div>
+          <div class="skill">APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Services Offered</h2>
+      <div class="card">
+        <ul>
+          <li>Custom Discord bots with advanced features and dashboard integration</li>
+          <li>Modern responsive websites and eye-catching landing pages</li>
+          <li>Admin dashboards with real-time analytics and data visualization</li>
+          <li>Python automation scripts and backend development</li>
+          <li>API integration and custom web applications</li>
+          <li>Ongoing maintenance packages with priority support</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="copyright">© 2025 SHARUUX. Built with passion and code.</div>
+      <div class="socials">
+        <a href="https://github.com/SHARUUX-2007" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://youtube.com/@SHARUUX-YT" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/sha.ruux/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://discord.gg/4PwVtkUxqM" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Enhanced star creation
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const starCount = 80;
+
+      for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        const size = Math.random() * 2.5 + 0.5;
+        star.style.width = size + 'px';
+        star.style.height = size + 'px';
+        star.style.animationDelay = Math.random() * 4 + 's';
+        star.style.animationDuration = Math.random() * 4 + 3 + 's';
+        starsContainer.appendChild(star);
+      }
+    }
+
+    createStars();
+
+    function joinDiscord() {
+      window.open('https://discord.gg/4PwVtkUxqM', '_blank');
+    }
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Parallax effect on scroll
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const stars = document.getElementById('stars');
+      stars.style.transform = `translateY(${scrolled * 0.5}px)`;
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature, .card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>
